@@ -1,0 +1,28 @@
+package com.flipkart;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import com.flipkart.constants.constant;
+import com.flipkart.keywords.keyword;
+
+public class logInPage extends keyword {
+	@Test(priority=1)
+	public void verifyLoginButton() {
+		launchBrowser("CHROME");
+		openUrl("https://www.flipkart.com");
+		impliciteWait(3000);
+	    closePopup();
+		clickOn("Login");
+		String title = driver.getTitle();
+		System.out.println("The Login page title is:" + title);
+		keyword.closeBrowser();
+	}
+/*	
+	@Test(priority=2)
+	private void verifyLoginSuccessully() {
+		keyword.
+
+	}
+	*/
+
+}

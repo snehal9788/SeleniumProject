@@ -1,0 +1,37 @@
+package com.flipkart;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import com.flipkart.constants.constant;
+import com.flipkart.keywords.keyword;
+
+public class logInPage extends constant {
+	@Test(priority=1)
+	public void verifyLoginButton() {
+		keyword.launchBrowser("CHROME");
+		keyword.openUrl("https://www.flipkart.com");
+		keyword.impliciteWait(3000);
+		
+		keyword.getWebElement("Login").click();
+		String title = driver.getTitle();
+		System.out.println("The Login page title is:" + title);
+		if(title.contains("Login")) {
+			System.out.println("Test case is passed");
+		}
+		else {
+			System.out.println("Test case is failed");
+		}
+		Assert.assertEquals(title,
+				"Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp; More. Best Offers!");
+
+		keyword.closeBrowser();
+	}
+	
+/*	@Test(priority=2)
+	private void verifyLoginSuccessully() {
+		keyword.
+
+	}
+	*/
+
+}

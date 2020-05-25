@@ -1,0 +1,27 @@
+package com.flipkart;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.flipkart.keywords.keyword;
+
+public class logInPage extends keyword{
+	@BeforeMethod
+	public void launchURL() {
+		keyword.launchBrowser("CHROME");
+		keyword.launchUrl("WWW.flipkart.com");
+		keyword.impliciteWait(3000);
+	}
+	@Test
+	public static void singInButton() {
+		
+
+	}
+	 @AfterMethod
+	 public void closeURL() {
+	 keyword.closeBrowser();
+	 }
+	 
+
+}

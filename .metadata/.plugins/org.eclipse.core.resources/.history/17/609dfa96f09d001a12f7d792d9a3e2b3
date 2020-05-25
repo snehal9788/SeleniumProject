@@ -1,0 +1,30 @@
+package com.flipkart.cutomUtils;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+public class customUtil {
+	public static String getLocator(String locatorName) {
+		String locatorValue = " ";
+
+		try {
+			FileInputStream fis = new FileInputStream(
+					"C:\\Users\\Dhiraj\\eclipse-workspace\\Flipkart\\src\\main\\resources\\flipkartObjectRepository.properties");//for read data
+			Properties prop = new Properties();    // create instance of properties
+			prop.load(fis);    // load the file
+			locatorValue = prop.getProperty(locatorName);
+
+		} catch (FileNotFoundException e) {
+			System.out.println("Unable to open Flipkart Object Repository File"); // Error Msg
+			e.printStackTrace();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+
+		return locatorValue;
+
+	}
+}

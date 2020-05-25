@@ -1,0 +1,23 @@
+package com.hashmapDemo;
+
+import java.util.HashMap;
+import java.util.Set;
+
+public class hashMapDemo {
+	public static void main(String[] args) {
+		
+	HashMap hm = new HashMap();
+	
+	hm.put(10,"Amar");
+	hm.put(20,"Akbar");
+	hm.put(30,"Anthony");
+	hm.put(null,"Ram");
+
+	Set keys = hm.keySet();
+	Iterator itr=keys.iterator();
+    
+    while(itr.hashNext()) {
+      System.out.println(hm.get(itr.next()));
+ }
+}
+}

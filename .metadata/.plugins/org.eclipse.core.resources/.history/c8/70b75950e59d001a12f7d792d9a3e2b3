@@ -1,0 +1,9 @@
+package com.flipkart.constants;
+
+public class constant {
+	public static WebDriverManager driver;
+	public static WebElement element;
+	public static FluentWait wait;
+	public static Actions action;
+
+}

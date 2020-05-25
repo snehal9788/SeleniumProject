@@ -1,0 +1,12 @@
+package com.flipkart.cutomUtils;
+
+public class customUtil { 
+public static String getLocator(String locatorName) {
+	String locatorValue=" ";
+	FileInputStream fis=new FileInputStream("")
+	
+	return locatorValue;
+	
+	
+}
+}

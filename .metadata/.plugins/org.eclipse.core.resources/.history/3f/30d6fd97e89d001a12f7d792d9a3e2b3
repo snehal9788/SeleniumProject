@@ -1,0 +1,28 @@
+package com.flipkart.keywords;
+
+
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.flipkart.constants.constant;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class keyword extends constant{
+	public static void launchBrowser(String browserName) {
+		switch (browserName) {
+		case "CHROME":
+			WebDriverManager.chromedriver().setup();
+			driver=new ChromeDriver();
+			break;
+		case "FIREFOX":
+			WebDriverManager.firefoxdriver().setup();
+			driver=new
+		default:
+			break;
+		}
+
+
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Flipkart/src/main/resources/objectRepository.properties&apos; to &apos;flipkartObjectRepository.properties&apos;" description="Rename resource &apos;objectRepository.properties&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/objectRepository.properties" name="flipkartObjectRepository.properties" stamp="1590345172683" updateReferences="true"/>
+</session>
